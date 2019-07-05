@@ -1,1 +1,95 @@
+Deseret News Digital
+Working Procedures
+Updated June 2019
 
+
+Sprint Planning / Backlog Refinement
+Calculate team strength before planning using calculator - ask each person if they are going to have anything that slows them down (learning curve, vacations, etc.)
+Estimate release stories from the previous sprint and include them in the upcoming sprint (no more than 2 release stories per sprint if possible, so that QA can get through releases AND sprint work)
+Track points left over separately from the new points being committed to
+Agenda
+Review Sprint Result Stats
+Calculate Team Strength (review firefighter schedule)
+Create & Estimate Release Stories
+Create & Estimate Updates/Security Patches Story
+Review Milestones
+Talk about Sprint Goal for Next Sprint
+Review Unfinished Stories from Sprint
+PO decides to keep or send back to the backlog
+Estimate & Review Backlog Items, and Pull Some Into Sprint
+Review number of Utah Only stories versus stories accessible to all
+Check with All Team Members on the Commitment & Adjust as Needed
+
+Backlog Refinement
+Work from the Technical Definition lane to refine stories, and once they are estimated, move them to the Defined lane
+All stories should include notes for QA & Automation, or be labeled “No QA/Automation”
+
+Estimation
+We estimate using the Fibonacci scale
+The team should discuss the complexity, risk and effort required for each story before estimating it.  After that discussion, the following are guidelines to consider related to time:
+1 = <2 hours of work, should be able to do 2 or 3 of these in a day
+2 = 1 day of work
+3 = 1-2 days of work
+5 = 3-5 days of work (can be done in a week)
+8 = Will take the whole sprint for one developer
+13 = Too big to bring into a sprint unless broken down into smaller stories
+
+
+Sprint Management
+Label stories committed to for each sprint with the sprint number (“sprint 288”)
+Blocked stories should be labeled with the “BLOCKED” label, and have a task assigned to someone to unblock the story.  If you don’t know who to assign it to, still create the task
+Stories should include a section for “QA/Automation Notes”, with instructions on what should be checked manually in QA, and what automated tests should be written.  This section can be written by POs when creating stories, and refined by the team during backlog refinement.  Or, for investigation or technical stories, this section can be written by the developer that did the work on the story before they pass it on.
+Create CR and QA tasks when moving a story to “Ready for CR/QA” and assign them to people
+When a story doesn’t pass QA, it gets moved back to the “In Development” queue, but no tasks are assigned.  The owner of the story should take care of the fixes and then submit it back to “Ready for CR/QA” as described in the bullet point above
+Once automation tests are complete, stories should be moved from the “Automation Development” lane to the “Dev Review” lane
+Items in Dev Review lane are for the lead dev to accept unless he assigns someone else to do it by creating an assigned task
+Definition of Done is getting to PO Review for most stories, and getting past Dev Review for dev review stories
+Velocity consists of sprint points completed. Adjusted velocity includes sprint points completed and other points completed during the sprint which were not part of the original commitment
+Devs should open their stage branches after creating them to test that they are working before submitting it to QA
+If a dev is going on vacation during the sprint, and won’t return before it ends, then he or she should bring up any stories they are working on during standup so that the team can collaborate on whether to hand them off or wait for them to be finished in the next sprint.
+The team sets aside time from 1pm-3pm as “maker time” to be as uninterrupted as possible for that portion of the day. Team members should Slack each other if they need help for things they are working on during this time, rather than reaching out verbally.  Pairing sessions are encouraged during this time.
+In general, if someone is wearing headphones, Slack them rather than interrupting them verbally.  If they’re only wearing them over one ear, then it is okay to interrupt them.
+
+Firefighting
+Each day one developer is designated the “firefighter” and is responsible for handling all the requests that come through the #dn-product-feedback channel, as well as anyone who walks in the door
+If the firefighter can’t solve any of those issues on his own, he can reach out to the other developers for help, but should always attempt to fix it himself first
+Weekends are also covered by one of the developers acting as the firefighter for the whole weekend - the weekend responsibility rotates separately from the weekday schedule
+Firefighting responsibility changes hands each day at the daily standup
+The firefighting schedule should be reviewed and adjusted as needed during sprint planning
+
+Acceptance Criteria
+All code will adhere to our coding standards as defined below:
+PHP
+We will follow the PSR2 spec.
+JS
+We will follow the AirBnB spec with the following exceptions:
+Overrides for Base JS
+Indents will be 4 spaces rather than 2 (https://github.com/airbnb/javascript#whitespace)
+Overrides for React 
+File extension will just be `.js` and not `.jsx` (https://github.com/airbnb/javascript/tree/master/react#naming)
+
+Daily Scrum
+Scrum Master posts the Daily Scrum Reports and Random Order in the Slack Channel each day before standup (create random order at https://www.random.org/lists/)
+Scrum Master should review the current sprint goals with the team before handing off the meeting to the dev team for collaboration
+The person at the top of the random order list reports first, followed by the next person in the list and so forth. However, team members should feel welcome to ask questions or collaborate at any time during the reporting.
+The Scrum Master says “Thank You” after each report, to signal the next person to begin (only if we are on a hangout)
+Stories that have not been updated in 2 days are “stale” and should be brought up in the daily scrum
+Pending tasks that are surfaced during standup should be captured as tasks in the stories they apply to, or ask tasks in the generic sprint goal story at the top of the Current Sprint column.  The scrum master should be added to all such tasks so that he can help with follow up.
+
+Sprint Review
+Devs should enter their notes in the Sprint Planning doc prior to the retro & sprint review planning on Tuesday morning
+Sprint Review Planning occurs Tuesday morning so that the Scrum Master can e-mail out the notes to the stakeholders later that day (before sprint review on Wednesday)
+
+Bug Fixes
+If it pertains to an article that is more than 6 months old, then it may not need to be reported/fixed.  First check to see if the issue can be replicated on a newer article, and if so then it should be addressed.
+Bugs should be entered in the appropriate area, “Reported Bugs” within clubhouse in priority order, and then reviewed with Chase during the weekly Review Bugs meeting to determine if they will 1) be moved to the backlog, 2) left in Reported Bugs for later,  3) moved to “Won’t Fix”, or 4) deleted
+
+Content Team Training
+Bugs that turn out to be items that simply need to be addressed/updated/fixed by the content team will be mentioned by Chase in the Homepage Slack channel and the content team will take action on them from there
+
+Releases
+Create release stories every Wednesday (Brendan)
+Create & estimate release stories during sprint planning and include in sprint work
+Release testing usually takes 2-3 days for each story.  If it needs to be done in 1 day we need to notify Anna so that she can prioritize and cut short some of the testing.
+PO posts release updates in the dn-all-staff slack channel each time they happen
+When releasing hotfixes, post in Slack channel so that QA can test them after the fact
